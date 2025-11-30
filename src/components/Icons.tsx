@@ -58,15 +58,16 @@ export const PartyHatSVG = ({ className, colorBase, colorDecor }: { className?: 
 
 export const CakeSVG = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 50 50" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    {/* Velas */}
+    <rect x="12" y="15" width="3" height="10" fill="#60A5FA" />
+    <rect x="23.5" y="12" width="3" height="13" fill="#A78BFA" />
+    <rect x="35" y="15" width="3" height="10" fill="#60A5FA" />
     {/* Base del pastel */}
     <rect x="5" y="25" width="40" height="20" rx="3" fill="#FCD34D" />
     <rect x="5" y="35" width="40" height="10" rx="3" fill="#FBBF24" />
     {/* Glaseado */}
     <path d="M5 25 C 5 25 10 20 15 25 C 20 30 25 20 30 25 C 35 30 40 20 45 25" stroke="#F472B6" strokeWidth="3" fill="none" strokeLinecap="round" />
-    {/* Velas */}
-    <rect x="12" y="15" width="3" height="10" fill="#60A5FA" />
-    <rect x="23.5" y="12" width="3" height="13" fill="#A78BFA" />
-    <rect x="35" y="15" width="3" height="10" fill="#60A5FA" />
 
     {/* Llamas Animadas (Estilo Fuego) */}
     {/* Llama 1 (Izquierda) */}
@@ -129,22 +130,18 @@ export const CakeSVG = ({ className }: { className?: string }) => (
   </svg>
 );
 
+import { GiTrumpetFlag } from "react-icons/gi";
+
 export const TrumpetIcon = ({ className, flipped = false }: { className?: string; flipped?: boolean }) => (
-  <svg
-    viewBox="0 0 50 50"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
+  <p className={className}>  <GiTrumpetFlag
     className={className}
-    style={{ transform: flipped ? "scaleX(-1)" : "none" }}
-  >
-    <path d="M10 20 L30 15 L35 15 L35 25 L30 25 L10 20 Z" fill="currentColor" fillOpacity="0.2" />
-    <path d="M35 18 L45 12 L45 28 L35 22" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M35 18 V 22" />
-    <path d="M10 20 C 8 20, 5 18, 2 15" strokeLinecap="round" />
-    <path d="M32 24 V 40 L 25 35 L 18 40 V 23" fill="currentColor" fillOpacity="0.1" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="25" cy="30" r="2" fill="currentColor" />
-  </svg>
+
+    style={{
+      transform: flipped ? "scaleX(-1)" : "none",
+      color: "currentColor",
+    }}
+  /></p>
+
 );
 
 export const CastleBackground = ({ className }: { className?: string }) => (
